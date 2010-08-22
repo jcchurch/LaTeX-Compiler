@@ -1,0 +1,26 @@
+This is a quick and dirty Python script that I use to create LaTeX files. Here are the options:
+
+There's multiple commands that you need to execute to convert an TEX file into a PDF file
+(and there's more if you include a BibTex file), and this Python script handles all of them.
+
+$ lt.py -h
+Usage: lt.py [options] [latex file]
+
+This program is used to convert LaTeX documents into PDF documents.
+
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -s, --show            Show the completed PDF.
+  -v, --verbose         Be verbose. Print what is going on.
+  -C, --noclean         Delete intermediate files if typesetting successful.
+  -p PAPERSIZE, --papersize=PAPERSIZE
+                        Desired papersize handled by dvipdfm. Uses 'letter' by
+                        default.
+
+This program assumes that the following files are already installed and configured on your computer:
+
+latex   - Used to convert a TEX file into a DVI file
+dvipdfm - Used to convert a DVI file into a PDF file
+bibtex  - Used to incoperate a BIB file (for your document's sources) into the DVI file made by LaTeX
+evince  - Used to display PDFs. Standard program on Linux distros.
