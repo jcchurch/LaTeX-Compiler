@@ -94,16 +94,10 @@ class LaTeX:
         return True
 
     def clean(self):
-        try: os.unlink(self.basename+".aux");
-        except: pass
-        try: os.unlink(self.basename+".bbl");
-        except: pass
-        try: os.unlink(self.basename+".dvi");
-        except: pass
-        try: os.unlink(self.basename+".log");
-        except: pass
-        try: os.unlink(self.basename+".blg");
-        except: pass
+        extensions = ["aux", "bbl", "dvi", "log", "blg", "toc"]
+        for ext in extensions: 
+            try: os.unlink(self.basename+"."+ext)
+            except: pass
 
     def show(self):
         if os.path.exists(self.basename+".pdf"):
