@@ -1,4 +1,4 @@
-This is a quick and dirty Python script that I use to create LaTeX files. Here are the options:
+This is a quick and dirty Python script that I use to compile LaTeX files to PDF. Here are the options:
 
 There's multiple commands that you need to execute to convert an TEX file into a PDF file
 (and there's more if you include a BibTex file), and this Python script handles all of them.
