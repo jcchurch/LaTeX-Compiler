@@ -84,7 +84,8 @@ class LaTeX:
         if self.bibtexFound:
             self.execute(self.bibtex+" "+self.basename)
             self.execute(self.latex+" "+self.basename)
-            self.execute(self.latex+" "+self.basename)
+
+        self.execute(self.latex+" "+self.basename)
 
         if os.path.exists(self.basename+".dvi"):
             self.execute(self.dvipdf+" -p "+self.papersize+" "+self.basename+".dvi", True)
