@@ -95,7 +95,7 @@ class LaTeX:
         return True
 
     def clean(self):
-        extensions = ["aux", "bbl", "dvi", "log", "blg", "toc"]
+        extensions = ["aux", "bbl", "dvi", "log", "blg", "toc", "nav", "out", "snm"]
         for ext in extensions: 
             try: os.unlink(self.basename+"."+ext)
             except: pass
